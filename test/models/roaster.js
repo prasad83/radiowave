@@ -72,9 +72,6 @@ describe('Model', function () {
           }
         }).then(function (alice) {
 
-          console.log(alice);
-          x;
-
           john.addRoaster(alice, {
             name: 'ms. a',
             group: 'friends',
