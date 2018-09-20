@@ -129,9 +129,9 @@ describe('Model', function () {
       }).then(function (user) {
 
         user.getChannels({
-          where: db.sequelize.where(
-            db.sequelize.col('ChannelSub.affiliation', '=', db.ChannelSub.Affiliation.Owner)
-          )
+          where: {
+            'ChannelSub.affiliation': db.ChannelSub.Affiliation.Owner
+          }
         }).then(function (ownerChannels) {
           assert.equal(ownerChannels.length, 1);
           done();
