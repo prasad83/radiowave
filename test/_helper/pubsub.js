@@ -2,7 +2,7 @@
 
 var Promise = require('bluebird'),
   ltx = require('ltx'),
-  uuid = require('node-uuid'),
+  uuid = require('uuid'),
   JID = require('node-xmpp-core').JID;
 
 var helper = require('./helper');

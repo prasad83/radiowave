@@ -1,7 +1,7 @@
 'use strict';
 
 var fs = require('fs'),
-  uuid = require('node-uuid'),
+  uuid = require('uuid'),
   assert = require('assert'),
   radiowave = require('../../lib'),
   Storage = radiowave.Storage;
@@ -129,9 +129,9 @@ describe('Model', function () {
       }).then(function (user) {
 
         user.getChannels({
-          where: {
-            'ChannelSub.affiliation': db.ChannelSub.Affiliation.Owner
-          }
+          where: db.sequelize.where(
+            db.sequelize.col('ChannelSub.affiliation', '=', db.ChannelSub.Affiliation.Owner)
+          )
         }).then(function (ownerChannels) {
           assert.equal(ownerChannels.length, 1);
           done();

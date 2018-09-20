@@ -1,7 +1,7 @@
 'use strict';
 
 var fs = require('fs'),
-  uuid = require('node-uuid'),
+  uuid = require('uuid'),
   assert = require('assert'),
   radiowave = require('../../lib'),
   Storage = radiowave.Storage;
@@ -71,6 +71,9 @@ describe('Model', function () {
             jid: 'alice@example.net'
           }
         }).then(function (alice) {
+
+          console.log(alice);
+          x;
 
           john.addRoaster(alice, {
             name: 'ms. a',

@@ -19,7 +19,7 @@ function configureXEP(server) {
   }));
 }
 
-var uuid = require('node-uuid');
+var uuid = require('uuid');
 
 /**
  * @see http://xmpp.org/extensions/xep-0060.html

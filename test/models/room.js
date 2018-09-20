@@ -1,7 +1,7 @@
 'use strict';
 
 var fs = require('fs'),
-  uuid = require('node-uuid'),
+  uuid = require('uuid'),
   assert = require('assert'),
   radiowave = require('../../lib'),
   Storage = radiowave.Storage;
